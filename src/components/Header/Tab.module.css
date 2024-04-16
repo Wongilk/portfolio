@@ -1,0 +1,12 @@
+.pc_li {
+  width: max-content;
+  text-align: center;
+  cursor: pointer;
+}
+
+.mobile_li {
+  margin-left: 3rem;
+  width: max-content;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}

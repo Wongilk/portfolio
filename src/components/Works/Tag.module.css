@@ -1,0 +1,10 @@
+.tag {
+  background-color: #333333;
+  border-radius: 50px;
+  height: 4vh;
+  width: 6vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: medium;
+}

@@ -1,0 +1,24 @@
+.container {
+  height: 100vh;
+  background-color: #333333;
+  padding: 10vh 9vw;
+  text-align: center;
+}
+
+.p {
+  font-size: xx-large;
+}
+
+.hr {
+  background-color: white;
+  border: 0;
+  width: 140px;
+  height: 1px;
+}
+
+.body {
+  width: 80vw;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vh 2vw;
+}
