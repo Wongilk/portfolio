@@ -1,5 +1,6 @@
 import classes from "./ArchivingsCard.module.css";
-//이미지, 타이틀, 링크, 요약, 설명
+import { motion } from "framer-motion";
+
 type Props = {
   img: string;
   link: string;
@@ -7,7 +8,7 @@ type Props = {
 };
 const ArchivingsCard = ({ img, link, summary }: Props) => {
   return (
-    <div className={classes.container}>
+    <motion.div className={classes.container} whileHover={{ scale: 1.05 }}>
       <img src={img} alt="github" className={classes.img} />
       <div>
         <a href={link} className={classes.link}>
@@ -15,7 +16,7 @@ const ArchivingsCard = ({ img, link, summary }: Props) => {
         </a>
       </div>
       <p className={classes.summary}>{summary}</p>
-    </div>
+    </motion.div>
   );
 };
 
