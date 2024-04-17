@@ -1,0 +1,28 @@
+.container {
+  flex-basis: 25rem;
+  flex-grow: 0;
+
+  height: 13rem;
+  background-color: white;
+  border-radius: 1rem;
+  color: #333333;
+  text-align: left;
+  padding-left: 2rem;
+  margin: 0 auto;
+}
+
+.img {
+  margin: 1rem 0;
+  width: 15rem;
+  height: 7rem;
+}
+.link {
+  text-decoration: none;
+  color: rgb(174, 219, 219);
+  margin-bottom: 1rem;
+}
+
+.summary {
+  margin-top: 1rem;
+  font-weight: bolder;
+}

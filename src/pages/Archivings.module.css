@@ -1,4 +1,19 @@
-.wrapper {
-  height: 100vh;
+.container {
+  height: max-content;
   background-color: #333333;
+  padding-bottom: 5rem;
+}
+
+.intro {
+  padding-top: 2rem;
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 4rem;
+}
+
+.body {
+  display: flex;
+  margin: 0 auto;
+  gap: 2rem;
+  flex-wrap: wrap;
 }

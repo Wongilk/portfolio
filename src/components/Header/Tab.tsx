@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Pc, Tablet } from "../../utils/MediaQuery";
 import classes from "./Tab.module.css";
 import { useMediaQuery } from "react-responsive";
 

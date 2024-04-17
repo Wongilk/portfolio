@@ -2,12 +2,12 @@ import { createPortal } from "react-dom";
 
 import classes from "./Modal.module.css";
 
-type Prop = {
+type Props = {
   children: React.ReactNode;
   onClose: () => void;
 };
 
-const Modal = ({ children, onClose }: Prop) => {
+const Modal = ({ children, onClose }: Props) => {
   const modalRoot = document.getElementById("modal");
 
   const modal = (
