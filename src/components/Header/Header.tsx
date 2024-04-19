@@ -12,7 +12,7 @@ const Header = ({ ontabClick }: Props) => {
 
   const PcHeader = (
     <ul className={classes.pc_ul}>
-      <p style={{ marginRight: "30%", marginLeft: "5%" }}>WonGil's Portfolio</p>
+      <p style={{ marginRight: "30%" }}>WonGil's Portfolio</p>
       {tabList.map((list, index) => (
         <Tab key={list} text={list} index={index} onClick={ontabClick} />
       ))}
@@ -26,8 +26,8 @@ const Header = ({ ontabClick }: Props) => {
         maxHeight: tabClicked ? "14rem" : "4rem",
       }}
     >
-      <div className={classes.tablet_div}>
-        <p style={{ marginLeft: "5%" }}>WonGil's Portfolio</p>
+      <div className={classes.tablet_div} style={{ marginLeft: "5%" }}>
+        <p>WonGil's Portfolio</p>
 
         {tabClicked ? (
           <IoIosClose

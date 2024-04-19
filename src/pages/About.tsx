@@ -1,51 +1,23 @@
 import { forwardRef } from "react";
 import classes from "./About.module.css";
-import { IoPersonSharp } from "react-icons/io5";
-import { IoCalendar } from "react-icons/io5";
-import { IoHomeSharp } from "react-icons/io5";
-import { MdEmail } from "react-icons/md";
-import { SiGooglescholar } from "react-icons/si";
-import Item from "../components/About/Item";
-const Items = [
-  {
-    icon: <IoPersonSharp size={40} />,
-    title: "이름",
-    content: "김원길",
-  },
-  {
-    icon: <IoCalendar size={40} />,
-    title: "생년월일",
-    content: "1999.02.04",
-  },
-  {
-    icon: <MdEmail size={40} />,
-    title: "이메일",
-    content: "wwwkim99@naver.com",
-  },
-  {
-    icon: <IoHomeSharp size={40} />,
-    title: "거주지",
-    content: "경기도 화성시",
-  },
-  {
-    icon: <SiGooglescholar size={40} />,
-    title: "학력",
-    content: "단국대학교 (소프트웨어학과)",
-  },
-];
 
 const About = forwardRef<HTMLDivElement>((props, ref) => {
   return (
     <div className={classes.container} ref={ref}>
-      <div>
-        <p className={classes.p}>About Me</p>
-        <hr className={classes.hr} />
-      </div>
-
+      {/*한 줄 소개*/}
       <div className={classes.body}>
-        {Items.map((item) => (
-          <Item title={item.title} content={item.content} icon={item.icon} />
-        ))}
+        <div className={classes.left}>
+          About
+          <hr className={classes.hr} />
+        </div>
+        <div>
+          <p className={classes.short}>성장하고자 노력하는 사람</p>
+          <p className={classes.long}>
+            끊임없이 배우고, <br />
+            새로운 것에 도전하는 것을 좋아하며, <br />
+            사용자의 경험을 향상시킬 수 있는 방법을 고민하는 개발자입니다.
+          </p>
+        </div>
       </div>
     </div>
   );
