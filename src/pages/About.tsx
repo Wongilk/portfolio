@@ -1,16 +1,26 @@
 import { forwardRef } from "react";
 import classes from "./About.module.css";
+import { useMediaQuery } from "react-responsive";
 
 const About = forwardRef<HTMLDivElement>((props, ref) => {
+  const isMobile = useMediaQuery({ query: "(max-width : 767px)" });
   return (
     <div className={classes.container} ref={ref}>
-      {/*한 줄 소개*/}
-      <div className={classes.body}>
-        <div className={classes.left}>
+      <div
+        className={classes.body}
+        style={{ display: isMobile ? "block" : "flex" }}
+      >
+        <div
+          className={classes.left}
+          style={{ marginBottom: isMobile ? "15%" : "0%" }}
+        >
           About
           <hr className={classes.hr} />
         </div>
-        <div>
+        <div
+          className={classes.right}
+          style={{ textAlign: isMobile ? "center" : "left" }}
+        >
           <p className={classes.short}>성장하고자 노력하는 사람</p>
           <p className={classes.long}>
             끊임없이 배우고, <br />
