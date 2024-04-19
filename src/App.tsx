@@ -4,6 +4,7 @@ import About from "./pages/About";
 import Archivings from "./pages/Archivings";
 import Home from "./pages/Home";
 import Works from "./pages/Works";
+import Skills from "./pages/Skills";
 
 function App() {
   const tabRef = useRef<React.RefObject<HTMLDivElement>[]>([
@@ -34,8 +35,9 @@ function App() {
       <Header ontabClick={tabClickHandler} />
       <Home ref={tabRef.current[0]} onViewWorkClick={tabClickHandler} />
       <About ref={tabRef.current[1]} />
-      <Works ref={tabRef.current[2]} />
-      <Archivings ref={tabRef.current[3]} />
+      <Skills ref={tabRef.current[2]} />
+      <Works ref={tabRef.current[3]} />
+      <Archivings ref={tabRef.current[4]} />
     </>
   );
 }
