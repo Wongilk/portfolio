@@ -1,3 +1,5 @@
+@import url("/src/color.css");
+
 .pc_ul {
   display: flex;
   list-style-type: none;
@@ -7,7 +9,7 @@
   align-items: center;
 
   position: fixed;
-  box-shadow: 0px 1px 3px;
+  box-shadow: 0px 1px 3px var(--blue500);
   backdrop-filter: blur(10px);
 }
 

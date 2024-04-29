@@ -1,13 +1,16 @@
+@import url("/src/color.css");
+
 .container {
-  width: 80%;
+  background-color: var(--blue100);
   margin: 0 auto;
-  padding: 10vh 0;
+  padding: 5rem 0;
 }
 
 .body {
   display: flex;
   flex-wrap: wrap;
-  gap: 2vh 2vw;
+  margin: 0 10%;
+  gap: 2rem 2rem;
 }
 
 .intro {
@@ -16,10 +19,9 @@
   font-size: 3rem;
 }
 
-.hr {
-  background-color: #333333;
-  border: 0;
-  width: 15rem;
-  height: 1px;
-  margin-bottom: 10vh;
+.underline {
+  background-color: var(--black);
+  margin: 0.5rem auto 4rem auto;
+  width: 13rem;
+  height: 0.1rem;
 }

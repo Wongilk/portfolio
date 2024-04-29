@@ -1,6 +1,8 @@
+@import url("/src/color.css");
+
 .container {
   height: max-content;
-  background-color: #333333;
+  background-color: var(--blue100);
 }
 
 .body {
@@ -12,8 +14,10 @@
   gap: 10%;
 }
 
-.hr {
-  width: 3rem;
+.underline {
+  width: 9rem;
+  height: 0.1rem;
+  background-color: var(--black);
   margin: 0.5rem auto;
 }
 

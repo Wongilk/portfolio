@@ -15,7 +15,7 @@ const About = forwardRef<HTMLDivElement>((props, ref) => {
           style={{ marginBottom: isMobile ? "15%" : "0%" }}
         >
           About
-          <hr className={classes.hr} />
+          <div className={classes.underline} />
         </div>
         <div
           className={classes.right}

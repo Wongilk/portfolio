@@ -1,5 +1,6 @@
+@import url("/src/color.css");
+
 .container {
   width: 80%;
   margin: 0 auto;
-  background-color: white;
 }

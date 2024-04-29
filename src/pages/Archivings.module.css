@@ -1,6 +1,7 @@
+@import url("/src/color.css");
+
 .container {
   height: max-content;
-  background-color: #333333;
   padding-bottom: 5rem;
 }
 
@@ -16,4 +17,11 @@
   margin: 0 auto;
   gap: 2rem;
   flex-wrap: wrap;
+}
+
+.underline {
+  width: 16rem;
+  height: 0.1rem;
+  background-color: var(--black);
+  margin: 0.5rem auto;
 }

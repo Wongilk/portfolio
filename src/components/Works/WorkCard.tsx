@@ -1,5 +1,4 @@
 import { useMediaQuery } from "react-responsive";
-import Tag from "./Tag";
 import classes from "./WorkCard.module.css";
 
 type Props = {

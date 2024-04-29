@@ -54,7 +54,7 @@ const Works = forwardRef<HTMLDivElement>((props, ref) => {
         Projects
       </div>
 
-      <hr className={classes.hr} />
+      <div className={classes.underline} />
 
       <div className={classes.body}>
         {works.map((work) => (

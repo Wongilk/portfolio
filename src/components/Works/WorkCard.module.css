@@ -1,9 +1,11 @@
+@import url("/src/color.css");
+
 .container {
   width: 100%;
-  background-color: white;
+  background-color: var(--white);
   border-radius: 1rem;
-  box-shadow: 0 0 10px white;
-  color: black;
+  box-shadow: 0 0 10px var(--blue500);
+  color: var(--black);
   padding: 2rem 2rem;
 }
 
@@ -17,14 +19,11 @@
 .projectType {
   text-align: center;
   font-size: 1rem;
-  color: gray;
+  color: var(--gray);
   margin-bottom: 1rem;
 }
 
 .contents {
   display: flex;
   gap: 1rem 1rem;
-}
-
-.contents {
 }

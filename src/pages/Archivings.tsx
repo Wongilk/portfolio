@@ -27,6 +27,7 @@ const Archivings = forwardRef<HTMLDivElement>((props, ref) => {
       <div className={classes.intro}>
         <IoIosLink />
         Archivings
+        <div className={classes.underline} />
       </div>
 
       <div

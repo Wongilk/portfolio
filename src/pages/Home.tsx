@@ -20,7 +20,7 @@ const Home = forwardRef<HTMLDivElement, Props>(({ onViewWorkClick }, ref) => {
   const [isMoseEnter, setIsMouseEnter] = useState(false);
 
   const makeStars = () => {
-    for (let i = 0; i < 15; i++) {
+    for (let i = 0; i < 50; i++) {
       const x = Math.floor(Math.random() * window.innerWidth) - 50;
       const y = Math.floor(Math.random() * window.innerHeight) - 50;
       const time = Math.random() * (6 - 2) + 2;
@@ -64,14 +64,17 @@ const Home = forwardRef<HTMLDivElement, Props>(({ onViewWorkClick }, ref) => {
         <div>
           <p className={classes.intro}>
             Hello. I'm Kim Won Gil <br />
-            I'm web frontend developer
+            I'm <span style={{ color: "var(--blue500)" }}>
+              web frontend
+            </span>{" "}
+            developer
           </p>
           <motion.div
             className={classes.box}
             onClick={onViewWorkClick}
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
-            whileHover={{ backgroundColor: "#333333" }}
+            whileHover={{ backgroundColor: "var(--blue300)" }}
           >
             Check out My works
             <motion.span
