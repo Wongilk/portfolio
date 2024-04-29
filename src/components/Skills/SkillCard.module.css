@@ -1,0 +1,46 @@
+.container {
+  width: 70%;
+  margin: 0 auto;
+  height: fit-content;
+  display: flex;
+  gap: 1rem;
+}
+
+.img_box {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 10px;
+  box-shadow: 0 0 2px 2px black;
+}
+
+.img_box img {
+  width: 100%;
+  height: 100%;
+}
+
+.bar_container {
+  width: 80%;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+}
+
+.full_bar {
+  width: 80%;
+  height: 3rem;
+  background-color: aqua;
+  border-radius: 10px;
+}
+
+.bar {
+  background-color: antiquewhite;
+  height: 3rem;
+  border-radius: 10px;
+  animation: progress 1s;
+}
+
+@keyframes progress {
+  0% {
+    width: 0;
+  }
+}

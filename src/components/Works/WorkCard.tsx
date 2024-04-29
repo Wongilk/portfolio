@@ -1,69 +1,38 @@
-import Modal from "../../utils/Modal";
+import { useMediaQuery } from "react-responsive";
 import Tag from "./Tag";
 import classes from "./WorkCard.module.css";
-import { useState } from "react";
-import WorkDetail from "./WorkDetail";
 
 type Props = {
   backgroundImg: string;
   title: string;
+  desc: string;
+  projectType: string;
   tags: string[];
 };
 
-const WorkCard = ({ backgroundImg, title, tags }: Props) => {
-  // const [isMouseEnter, setIsMouseEnter] = useState(false);
-  const [showDetail, setShowDetail] = useState(false);
-
-  // const mouseEnterHandler = () => {
-  //   setIsMouseEnter(true);
-  // };
-
-  // const mouseLeaveHandler = () => {
-  //   setIsMouseEnter(false);
-  // };
-
-  const viewDetailHandler = () => {
-    setShowDetail(true);
-  };
-  const closeDetailHandler = () => {
-    setShowDetail(false);
-  };
+const WorkCard = ({ backgroundImg, title, desc, tags, projectType }: Props) => {
+  const isPc = useMediaQuery({
+    query: "(min-width : 992px)",
+  });
 
   return (
-    <div
-      className={classes.wrapper}
-      // onMouseEnter={mouseEnterHandler}
-      // onMouseLeave={mouseLeaveHandler}
-    >
-      <div className={classes.left}>
-        <p>{title}</p>
+    <div className={classes.container}>
+      <p className={classes.title}>{title}</p>
+      <p className={classes.projectType}>{projectType}</p>
+
+      <div
+        className={classes.contents}
+        style={{ flexWrap: isPc ? "nowrap" : "wrap" }}
+      >
         <img
           src={backgroundImg}
-          alt="project img"
-          // className={isMouseEnter ? classes.hoverImage : classes.image}
-          className={classes.image}
+          alt="backgroundImg"
+          style={{ width: isPc ? "50%" : "100%" }}
         />
-
-        <div className={classes.bottom}>
-          {tags.map((tag, index) => (
-            <Tag title={tag} key={index} />
-          ))}
+        <div>
+          <p>{desc}</p>
         </div>
       </div>
-
-      <div className={classes.right}></div>
-
-      {/* {isMouseEnter && (
-        <button className={classes.button} onClick={viewDetailHandler}>
-          View Details
-        </button>
-      )} */}
-
-      {showDetail && (
-        <Modal onClose={closeDetailHandler}>
-          <WorkDetail title={title} onClose={closeDetailHandler} />
-        </Modal>
-      )}
     </div>
   );
 };

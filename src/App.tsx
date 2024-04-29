@@ -25,7 +25,7 @@ function App() {
     const clickedIndex = Number(e.currentTarget.dataset.index);
 
     //checkout my works
-    if (isNaN(clickedIndex)) scroll(tabRef.current[2]);
+    if (isNaN(clickedIndex)) scroll(tabRef.current[3]);
     //tabs
     else scroll(tabRef.current[clickedIndex]);
   };

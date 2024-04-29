@@ -1,5 +1,5 @@
 .container {
-  width: 82vw;
+  width: 80%;
   margin: 0 auto;
   padding: 10vh 0;
 }
@@ -10,14 +10,16 @@
   gap: 2vh 2vw;
 }
 
-.p {
-  font-size: xx-large;
+.intro {
+  padding-top: 2rem;
+  text-align: center;
+  font-size: 3rem;
 }
 
 .hr {
   background-color: #333333;
   border: 0;
-  width: 100%;
+  width: 15rem;
   height: 1px;
   margin-bottom: 10vh;
 }
