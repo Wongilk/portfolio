@@ -1,6 +1,5 @@
 import { forwardRef } from "react";
 import classes from "./Archivings.module.css";
-import { IoIosLink } from "react-icons/io";
 import ArchivingsCard from "../components/Archivings/ArchivingsCard";
 import { useMediaQuery } from "react-responsive";
 
@@ -25,7 +24,6 @@ const Archivings = forwardRef<HTMLDivElement>((props, ref) => {
   return (
     <div className={classes.container} ref={ref}>
       <div className={classes.intro}>
-        <IoIosLink />
         Archivings
         <div className={classes.underline} />
       </div>

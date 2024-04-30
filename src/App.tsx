@@ -29,7 +29,6 @@ function App() {
     //tabs
     else scroll(tabRef.current[clickedIndex]);
   };
-
   return (
     <>
       <Header ontabClick={tabClickHandler} />

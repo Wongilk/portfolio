@@ -1,7 +1,6 @@
 import { forwardRef } from "react";
 import classes from "./Works.module.css";
 import WorkCard from "../components/Works/WorkCard";
-import { IoIosLink } from "react-icons/io";
 
 const works = [
   {
@@ -49,10 +48,7 @@ const works = [
 const Works = forwardRef<HTMLDivElement>((props, ref) => {
   return (
     <div className={classes.container} ref={ref}>
-      <div className={classes.intro}>
-        <IoIosLink />
-        Projects
-      </div>
+      <div className={classes.intro}>Projects</div>
 
       <div className={classes.underline} />
 

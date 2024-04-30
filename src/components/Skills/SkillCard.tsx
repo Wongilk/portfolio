@@ -1,21 +1,24 @@
-import classes from "../Skills/SkillCard.module.css";
+import SkillBar from "./SkillBar";
+import classes from "./SkillCard.module.css";
 
 type Props = {
-  img: string;
-  percentage?: string;
+  part: string;
+  skills: Skill[];
 };
-const SkillCard = ({ img, percentage = "70%" }: Props) => {
+
+type Skill = {
+  img: string;
+  percentage: string;
+};
+
+const SkillCard = ({ part, skills }: Props) => {
+  const renderSkills = skills.map((skill) => (
+    <SkillBar img={skill.img} percentage={skill.percentage} />
+  ));
   return (
     <div className={classes.container}>
-      <div className={classes.img_box}>
-        <img src={img} alt="teck img" />
-      </div>
-
-      <div className={classes.bar_container}>
-        <div className={classes.full_bar}>
-          <div className={classes.bar} style={{ width: percentage }}></div>
-        </div>
-      </div>
+      <p>{part}</p>
+      {renderSkills}
     </div>
   );
 };

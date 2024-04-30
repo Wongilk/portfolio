@@ -1,6 +1,21 @@
 @import url("/src/color.css");
 
-.container {
-  width: 80%;
+.intro {
+  padding-top: 6rem;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.underline {
+  background-color: var(--black);
+  margin: 0.5rem auto 4rem auto;
+  width: 7rem;
+  height: 0.1rem;
+}
+
+.contents {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
   margin: 0 auto;
 }

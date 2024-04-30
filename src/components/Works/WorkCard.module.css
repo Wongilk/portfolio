@@ -19,7 +19,7 @@
 .projectType {
   text-align: center;
   font-size: 1rem;
-  color: var(--gray);
+  color: var(--gray100);
   margin-bottom: 1rem;
 }
 
