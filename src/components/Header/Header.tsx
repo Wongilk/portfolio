@@ -7,7 +7,7 @@ type Props = {
   ontabClick: (e: React.MouseEvent<HTMLLIElement>) => void;
 };
 const Header = ({ ontabClick }: Props) => {
-  const tabList = ["Home", "About", "Skills", "Works", "Archivings"];
+  const tabList = ["Home", "About", "Skills", "Projects", "Archivings"];
   const [tabClicked, setTabClicked] = useState(false);
 
   const PcHeader = (

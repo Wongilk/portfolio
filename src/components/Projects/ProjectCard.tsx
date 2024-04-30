@@ -1,5 +1,5 @@
 import { useMediaQuery } from "react-responsive";
-import classes from "./WorkCard.module.css";
+import classes from "./ProjectCard.module.css";
 
 type Props = {
   backgroundImg: string;
@@ -9,7 +9,13 @@ type Props = {
   tags: string[];
 };
 
-const WorkCard = ({ backgroundImg, title, desc, tags, projectType }: Props) => {
+const ProjectCard = ({
+  backgroundImg,
+  title,
+  desc,
+  tags,
+  projectType,
+}: Props) => {
   const isPc = useMediaQuery({
     query: "(min-width : 992px)",
   });
@@ -36,4 +42,4 @@ const WorkCard = ({ backgroundImg, title, desc, tags, projectType }: Props) => {
   );
 };
 
-export default WorkCard;
+export default ProjectCard;

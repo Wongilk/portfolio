@@ -1,8 +1,8 @@
 import { forwardRef } from "react";
-import classes from "./Works.module.css";
-import WorkCard from "../components/Works/WorkCard";
+import classes from "./Projects.module.css";
+import ProjectCard from "../components/Projects/ProjectCard";
 
-const works = [
+const projects = [
   {
     backgroundImg:
       "https://media.triple.guide/triple-cms/c_limit,f_auto,h_1280,w_1280/4f07c2a1-ce0c-44ea-a382-59e11d1fd89a.jpeg",
@@ -45,7 +45,7 @@ const works = [
   },
 ];
 
-const Works = forwardRef<HTMLDivElement>((props, ref) => {
+const Projects = forwardRef<HTMLDivElement>((props, ref) => {
   return (
     <div className={classes.container} ref={ref}>
       <div className={classes.intro}>Projects</div>
@@ -53,18 +53,18 @@ const Works = forwardRef<HTMLDivElement>((props, ref) => {
       <div className={classes.underline} />
 
       <div className={classes.body}>
-        {works.map((work) => (
-          <WorkCard
-            key={work.title}
-            backgroundImg={work.backgroundImg}
-            title={work.title}
-            projectType={work.projectType}
-            desc={work.desc}
-            tags={work.tags}
-          ></WorkCard>
+        {projects.map((project) => (
+          <ProjectCard
+            key={project.title}
+            backgroundImg={project.backgroundImg}
+            title={project.title}
+            projectType={project.projectType}
+            desc={project.desc}
+            tags={project.tags}
+          ></ProjectCard>
         ))}
       </div>
     </div>
   );
 });
-export default Works;
+export default Projects;

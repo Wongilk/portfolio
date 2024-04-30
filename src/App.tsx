@@ -3,7 +3,7 @@ import Header from "./components/Header/Header";
 import About from "./pages/About";
 import Archivings from "./pages/Archivings";
 import Home from "./pages/Home";
-import Works from "./pages/Works";
+import Projects from "./pages/Projects";
 import Skills from "./pages/Skills";
 
 function App() {
@@ -24,7 +24,7 @@ function App() {
   const tabClickHandler: MouseEventHandler<HTMLElement> = (e) => {
     const clickedIndex = Number(e.currentTarget.dataset.index);
 
-    //checkout my works
+    //checkout my projects
     if (isNaN(clickedIndex)) scroll(tabRef.current[3]);
     //tabs
     else scroll(tabRef.current[clickedIndex]);
@@ -32,10 +32,10 @@ function App() {
   return (
     <>
       <Header ontabClick={tabClickHandler} />
-      <Home ref={tabRef.current[0]} onViewWorkClick={tabClickHandler} />
+      <Home ref={tabRef.current[0]} onViewProjectsClick={tabClickHandler} />
       <About ref={tabRef.current[1]} />
       <Skills ref={tabRef.current[2]} />
-      <Works ref={tabRef.current[3]} />
+      <Projects ref={tabRef.current[3]} />
       <Archivings ref={tabRef.current[4]} />
     </>
   );
