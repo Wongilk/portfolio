@@ -1,6 +1,7 @@
 import { forwardRef } from "react";
 import classes from "./Skills.module.css";
 import SkillCard from "../components/Skills/SkillCard";
+import { useMediaQuery } from "react-responsive";
 
 const frontSkills = [
   {
@@ -52,6 +53,9 @@ const backAndEtcSkills = [
 ];
 
 const Skills = forwardRef<HTMLDivElement>((props, ref) => {
+  const isPc = useMediaQuery({
+    query: "(min-width: 992px)",
+  });
   return (
     <div ref={ref}>
       <div className={classes.intro}>
@@ -59,7 +63,10 @@ const Skills = forwardRef<HTMLDivElement>((props, ref) => {
         <div className={classes.underline} />
       </div>
 
-      <div className={classes.contents}>
+      <div
+        className={classes.pcContents}
+        style={{ display: isPc ? "flex" : "block" }}
+      >
         <SkillCard part={"FrontEnd"} skills={frontSkills} />
         <SkillCard part={"BackEnd & Etc"} skills={backAndEtcSkills} />
       </div>
