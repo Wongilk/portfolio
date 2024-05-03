@@ -1,7 +1,6 @@
 @import url("/src/color.css");
 
 .container {
-  height: max-content;
   background-color: var(--blue100);
 }
 

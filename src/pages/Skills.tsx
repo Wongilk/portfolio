@@ -2,60 +2,86 @@ import { forwardRef } from "react";
 import classes from "./Skills.module.css";
 import SkillCard from "../components/Skills/SkillCard";
 import { useMediaQuery } from "react-responsive";
+import HTML from "../imgs/HTML.png";
+import CSS from "../imgs/CSS.jpg";
+import JS from "../imgs/JS.png";
+import REACT from "../imgs/REACT.png";
+import TS from "../imgs/TS.png";
+import STYlEDCOMPONENT from "../imgs/STYLED-COMPONENT.png";
+import REDUX from "../imgs/REDUX.png";
+import NODEJS from "../imgs/NODEJS.jpg";
+import MYSQL from "../imgs/MYSQL.png";
+import FIGMA from "../imgs/FIGMA.png";
+import GIT from "../imgs/GIT.png";
 
 const frontSkills = [
   {
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1024px-HTML5_logo_and_wordmark.svg.png",
+    img: HTML,
     percentage: "80%",
   },
   {
-    img: "https://t4.ftcdn.net/jpg/00/75/92/23/360_F_75922336_Jz2QgNOx7dnRea9ZI6yQTDtn1vHq5ejF.jpg",
+    img: CSS,
     percentage: "70%",
   },
   {
-    img: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+    img: JS,
     percentage: "80%",
   },
   {
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png",
+    img: REACT,
     percentage: "80%",
   },
   {
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png",
+    img: TS,
     percentage: "40%",
   },
   {
-    img: "https://raw.githubusercontent.com/reduxjs/redux/master/logo/logo.png",
+    img: REDUX,
     percentage: "60%",
   },
   {
-    img: "https://raw.githubusercontent.com/styled-components/brand/master/styled-components.png",
+    img: STYlEDCOMPONENT,
     percentage: "70%",
   },
 ];
 const backAndEtcSkills = [
   {
-    img: "https://banner2.cleanpng.com/20180425/jrw/kisspng-node-js-javascript-web-application-express-js-comp-5ae0f84e2a4242.1423638015246930701731.jpg",
+    img: NODEJS,
     percentage: "35%",
   },
   {
-    img: "https://upload.wikimedia.org/wikipedia/labs/8/8e/Mysql_logo.png",
+    img: MYSQL,
     percentage: "35%",
   },
   {
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/1667px-Figma-logo.svg.png",
+    img: FIGMA,
     percentage: "40%",
   },
   {
-    img: "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png",
+    img: GIT,
     percentage: "70%",
   },
 ];
 
 const Skills = forwardRef<HTMLDivElement>((props, ref) => {
+  // const target = useRef<HTMLDivElement | null>(null);
+  // const [isVisible, setIsVisible] = useState(false);
+
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver((entries) => {
+  //     if (!entries[0].isIntersecting) return;
+
+  //     setIsVisible(true);
+  //   });
+  //   if (target.current) {
+  //     observer.observe(target.current);
+  //   }
+  // }, []);
+
   const isPc = useMediaQuery({
     query: "(min-width: 992px)",
   });
+
   return (
     <div ref={ref}>
       <div className={classes.intro}>
@@ -65,10 +91,19 @@ const Skills = forwardRef<HTMLDivElement>((props, ref) => {
 
       <div
         className={classes.pcContents}
+        // ref={target}
         style={{ display: isPc ? "flex" : "block" }}
       >
-        <SkillCard part={"FrontEnd"} skills={frontSkills} />
-        <SkillCard part={"BackEnd & Etc"} skills={backAndEtcSkills} />
+        <SkillCard
+          part={"FrontEnd"}
+          skills={frontSkills}
+          // isVisible={isVisible}
+        />
+        <SkillCard
+          part={"BackEnd & Etc"}
+          skills={backAndEtcSkills}
+          // isVisible={isVisible}
+        />
       </div>
     </div>
   );
