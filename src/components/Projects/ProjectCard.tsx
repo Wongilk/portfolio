@@ -1,20 +1,27 @@
 import { useMediaQuery } from "react-responsive";
 import classes from "./ProjectCard.module.css";
+import Tag from "./Tag";
 
 type Props = {
   backgroundImg: string;
   title: string;
-  desc: string;
+  shortDesc: string;
+  longDesc: string;
+  features: string;
+  stack: string;
   projectType: string;
-  tags: string[];
+  git: string;
 };
 
 const ProjectCard = ({
   backgroundImg,
   title,
-  desc,
-  tags,
+  shortDesc,
+  longDesc,
   projectType,
+  features,
+  stack,
+  git,
 }: Props) => {
   const isPc = useMediaQuery({
     query: "(min-width : 992px)",
@@ -34,8 +41,13 @@ const ProjectCard = ({
           alt="backgroundImg"
           style={{ width: isPc ? "50%" : "100%" }}
         />
-        <div>
-          <p>{desc}</p>
+        <div className={classes.description}>
+          <p>{shortDesc}</p>
+          <p>{longDesc}</p>
+          <hr />
+          <Tag label="주요 기능" value={features} />
+          <Tag label="Stack" value={stack} />
+          <Tag label="Git" value={git} />
         </div>
       </div>
     </div>

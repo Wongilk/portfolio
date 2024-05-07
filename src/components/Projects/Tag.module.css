@@ -1,10 +1,26 @@
-.tag {
-  background-color: #333333;
-  border-radius: 50px;
-  height: 4vh;
-  width: 6vw;
+@import url("../../color.css");
+
+.container {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: medium;
+  width: 100%;
+  margin: 1.5rem auto;
+}
+
+.label {
+  display: flex;
+  gap: 0 0.5rem;
+  font-weight: 700;
+  width: 7.5rem;
+}
+
+.container > p {
+  text-align: start;
+  width: calc(100% - 7.5rem);
+}
+
+a {
+  text-decoration: none;
+  color: var(--blue500);
+  text-align: start;
+  width: calc(100% - 7.5rem);
 }

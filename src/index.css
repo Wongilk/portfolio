@@ -1,4 +1,8 @@
 @import url("/src/color.css");
+@font-face {
+  font-family: "Freesentation-4Regular";
+  src: url("./fonts/Freesentation-4Regular.ttf");
+}
 
 html,
 body,
@@ -107,6 +111,7 @@ body {
   background-color: var(--white);
   color: var(--black);
   height: 100vh;
+  font-family: "Freesentation-4Regular";
 }
 ol,
 ul {
