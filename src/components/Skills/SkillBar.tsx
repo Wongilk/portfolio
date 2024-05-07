@@ -6,23 +6,13 @@ type Props = {
   // isVisible: boolean;
 };
 
-const SkillBar = ({ img, percentage = "70%" }: Props) => {
+const SkillBar = ({ img, percentage }: Props) => {
   return (
-    <div className={classes.container}>
-      <div className={classes.img_box}>
-        <img src={img} alt="teck img" />
-      </div>
-      <div className={classes.bar_container}>
-        <div className={classes.full_bar}>
-          <motion.div
-            className={classes.bar}
-            viewport={{ once: true }}
-            whileInView={{
-              transform: `scaleX(${percentage})`,
-            }}
-          ></motion.div>
-        </div>
-      </div>
+    <div
+      className={classes.container}
+      style={{ backgroundImage: `url(${img})` }}
+    >
+      {/* <img src={img} alt="teck_img" className={classes.teck_img} /> */}
     </div>
   );
 };

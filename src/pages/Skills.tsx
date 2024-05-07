@@ -64,20 +64,6 @@ const backAndEtcSkills = [
 ];
 
 const Skills = forwardRef<HTMLDivElement>((props, ref) => {
-  // const target = useRef<HTMLDivElement | null>(null);
-  // const [isVisible, setIsVisible] = useState(false);
-
-  // useEffect(() => {
-  //   const observer = new IntersectionObserver((entries) => {
-  //     if (!entries[0].isIntersecting) return;
-
-  //     setIsVisible(true);
-  //   });
-  //   if (target.current) {
-  //     observer.observe(target.current);
-  //   }
-  // }, []);
-
   const isPc = useMediaQuery({
     query: "(min-width: 992px)",
   });
@@ -89,21 +75,9 @@ const Skills = forwardRef<HTMLDivElement>((props, ref) => {
         <div className={classes.underline} />
       </div>
 
-      <div
-        className={classes.pcContents}
-        // ref={target}
-        style={{ display: isPc ? "flex" : "block" }}
-      >
-        <SkillCard
-          part={"FrontEnd"}
-          skills={frontSkills}
-          // isVisible={isVisible}
-        />
-        <SkillCard
-          part={"BackEnd & Etc"}
-          skills={backAndEtcSkills}
-          // isVisible={isVisible}
-        />
+      <div className={classes.contents}>
+        <SkillCard part={"FrontEnd"} skills={frontSkills} />
+        <SkillCard part={"BackEnd & Etc"} skills={backAndEtcSkills} />
       </div>
     </div>
   );

@@ -4,7 +4,6 @@ import classes from "./SkillCard.module.css";
 type Props = {
   part: string;
   skills: Skill[];
-  // isVisible: boolean;
 };
 
 type Skill = {
@@ -14,16 +13,12 @@ type Skill = {
 
 const SkillCard = ({ part, skills }: Props) => {
   const renderSkills = skills.map((skill) => (
-    <SkillBar
-      img={skill.img}
-      percentage={skill.percentage}
-      // isVisible={isVisible}
-    />
+    <SkillBar img={skill.img} percentage={skill.percentage} />
   ));
   return (
     <div className={classes.container}>
-      <p>{part}</p>
-      {renderSkills}
+      <p className={classes.part}>{part}</p>
+      <div className={classes.skills}>{renderSkills}</div>
     </div>
   );
 };

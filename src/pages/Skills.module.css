@@ -13,9 +13,7 @@
   height: 0.1rem;
 }
 
-.pcContents {
+.contents {
   width: 90%;
-  flex-wrap: wrap;
-  justify-content: space-between;
   margin: 0 auto;
 }

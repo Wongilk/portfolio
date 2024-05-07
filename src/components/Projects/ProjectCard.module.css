@@ -4,7 +4,7 @@
   width: 100%;
   background-color: var(--white);
   border-radius: 1rem;
-  box-shadow: 0 0 10px var(--blue500);
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
   color: var(--black);
   padding: 2rem 2rem;
 }
