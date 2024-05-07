@@ -8,6 +8,7 @@ import CARMAKER from "../imgs/CARMAKER.png";
 
 const projects = [
   {
+    index: 0,
     backgroundImg: PORTFOLIO,
     title: "PORTFOLIO",
     shortDesc: "현재 포트폴리오를 구현한 웹 사이트입니다.",
@@ -19,6 +20,7 @@ const projects = [
     git: "https://github.com/Wongilk/portfolio",
   },
   {
+    index: 1,
     backgroundImg: CARMAKER,
     title: "내 차 만들기",
     shortDesc: "내 차 만들기 기획안을 구현한 웹 사이트입니다.",
@@ -31,6 +33,7 @@ const projects = [
     git: "https://github.com/Wongilk/A5-Idle",
   },
   {
+    index: 2,
     backgroundImg: NEWSSTAND,
     title: "NEWS STAND",
     shortDesc: "네이버의 뉴스스탠드를 vanila JS로 구현한 앱입니다.",
@@ -43,6 +46,7 @@ const projects = [
     git: "https://github.com/Wongilk/fe-newsstand/tree/two?tab=readme-ov-file",
   },
   {
+    index: 3,
     backgroundImg: KUDOG,
     title: "KUDOG",
     shortDesc: "구독 기반의 웹 쇼핑몰 사이트입니다.",
@@ -66,7 +70,8 @@ const Projects = forwardRef<HTMLDivElement>((props, ref) => {
       <div className={classes.body}>
         {projects.map((project) => (
           <ProjectCard
-            key={project.title}
+            key={project.index}
+            index={project.index}
             backgroundImg={project.backgroundImg}
             title={project.title}
             features={project.features}

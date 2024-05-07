@@ -1,8 +1,9 @@
 import { useMediaQuery } from "react-responsive";
 import classes from "./ProjectCard.module.css";
 import Tag from "./Tag";
-
+import { motion } from "framer-motion";
 type Props = {
+  index: number;
   backgroundImg: string;
   title: string;
   shortDesc: string;
@@ -14,6 +15,7 @@ type Props = {
 };
 
 const ProjectCard = ({
+  index,
   backgroundImg,
   title,
   shortDesc,
@@ -28,7 +30,13 @@ const ProjectCard = ({
   });
 
   return (
-    <div className={classes.container}>
+    <motion.div
+      className={classes.container}
+      initial={{ opacity: 0, x: index % 2 === 0 ? 100 : -100 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      transition={{ ease: "easeInOut", duration: 1, delay: 0.5 }}
+    >
       <p className={classes.title}>{title}</p>
       <p className={classes.projectType}>{projectType}</p>
 
@@ -50,7 +58,7 @@ const ProjectCard = ({
           <Tag label="Git" value={git} />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
