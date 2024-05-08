@@ -64,10 +64,6 @@ const backAndEtcSkills = [
 ];
 
 const Skills = forwardRef<HTMLDivElement>((props, ref) => {
-  const isPc = useMediaQuery({
-    query: "(min-width: 992px)",
-  });
-
   return (
     <div ref={ref}>
       <div className={classes.intro}>
