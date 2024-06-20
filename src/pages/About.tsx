@@ -1,4 +1,4 @@
-import { forwardRef } from "react";
+import React, { forwardRef } from "react";
 import classes from "./About.module.css";
 import { useMediaQuery } from "react-responsive";
 
