@@ -14,7 +14,7 @@ type Skill = {
 
 const SkillCard = ({ part, skills }: Props) => {
   const renderSkills = skills.map((skill) => (
-    <SkillBar img={skill.img} percentage={skill.percentage} />
+    <SkillBar img={skill.img} percentage={skill.percentage} key={skill.img} />
   ));
   return (
     <motion.div

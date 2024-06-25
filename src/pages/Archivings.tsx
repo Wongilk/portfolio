@@ -32,11 +32,12 @@ const Archivings = forwardRef<HTMLDivElement>((props, ref) => {
         className={classes.body}
         style={{ maxWidth: isPc ? "56rem" : "40rem" }}
       >
-        {Archivingss.map((Archivings) => (
+        {Archivingss.map((Archiving) => (
           <ArchivingsCard
-            img={Archivings.img}
-            link={Archivings.link}
-            summary={Archivings.summary}
+            key={Archiving.img}
+            img={Archiving.img}
+            link={Archiving.link}
+            summary={Archiving.summary}
           />
         ))}
       </div>

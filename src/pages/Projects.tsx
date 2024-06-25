@@ -13,8 +13,9 @@ const projects = [
     title: "PORTFOLIO",
     shortDesc: "현재 포트폴리오를 구현한 웹 사이트입니다.",
     longDesc:
-      "처음으로 타입스크립트를 이용해 구현해본 사이트로 타입스크립트의 기초를 다질 수 있었습니다.",
-    features: "X",
+      "타입스크립트를 이용해 구현해본 사이트로 타입스크립트의 기초를 다질 수 있었습니다.",
+    features:
+      "제 소개, 스킬, 그동안의 프로젝트, 학습 기록들을 정리하여 소개하고 있습니다.",
     projectType: "개인 프로젝트",
     stack: "TYPESCRIPT, REACT",
     git: "https://github.com/Wongilk/portfolio",

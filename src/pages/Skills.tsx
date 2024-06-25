@@ -1,7 +1,6 @@
 import { forwardRef } from "react";
 import classes from "./Skills.module.css";
 import SkillCard from "../components/Skills/SkillCard";
-import { useMediaQuery } from "react-responsive";
 import HTML from "../imgs/HTML.png";
 import CSS from "../imgs/CSS.jpg";
 import JS from "../imgs/JS.png";
@@ -9,8 +8,8 @@ import REACT from "../imgs/REACT.png";
 import TS from "../imgs/TS.png";
 import STYlEDCOMPONENT from "../imgs/STYLED-COMPONENT.png";
 import REDUX from "../imgs/REDUX.png";
-import NODEJS from "../imgs/NODEJS.jpg";
-import MYSQL from "../imgs/MYSQL.png";
+import NODEJS from "../imgs/NODEJS.png";
+import MYSQL from "../imgs/MYSQL.svg";
 import FIGMA from "../imgs/FIGMA.png";
 import GIT from "../imgs/GIT.png";
 
@@ -33,7 +32,7 @@ const frontSkills = [
   },
   {
     img: TS,
-    percentage: "40%",
+    percentage: "50%",
   },
   {
     img: REDUX,

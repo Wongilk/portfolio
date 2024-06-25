@@ -1,4 +1,11 @@
-import React, { forwardRef, useState } from "react";
+import React, {
+  forwardRef,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import { motion } from "framer-motion";
 
 import classes from "./Home.module.css";
@@ -6,6 +13,7 @@ import classes from "./Home.module.css";
 type Props = {
   onViewProjectsClick: (e: React.MouseEvent<HTMLDivElement>) => void;
 };
+
 type Star = {
   x: number;
   y: number;
@@ -14,13 +22,47 @@ type Star = {
   blur: number;
 };
 
+const alphabets = [
+  "A",
+  "B",
+  "C",
+  "D",
+  "E",
+  "F",
+  "G",
+  "H",
+  "I",
+  "J",
+  "K",
+  "L",
+  "M",
+  "N",
+  "O",
+  "P",
+  "Q",
+  "R",
+  "S",
+  "T",
+  "U",
+  "V",
+  "W",
+  "X",
+  "Y",
+  "Z",
+];
+
+const originText = "WEB FRONTEND";
 const Home = forwardRef<HTMLDivElement, Props>(
   ({ onViewProjectsClick }, ref) => {
-    const stars: Star[] = [];
+    const stars: Star[] = useMemo(() => {
+      return [];
+    }, []);
 
     const [isMoseEnter, setIsMouseEnter] = useState(false);
+    const [text, setText] = useState("CAPSLODMWKDO");
+    const rotationIndex = useRef(0);
 
-    const makeStars = () => {
+    const makeStars = useCallback(() => {
       for (let i = 0; i < 50; i++) {
         const x = Math.floor(Math.random() * window.innerWidth) - 50;
         const y = Math.floor(Math.random() * window.innerHeight) - 50;
@@ -29,11 +71,30 @@ const Home = forwardRef<HTMLDivElement, Props>(
         const blur = Math.random() * (7 - 1) + 1;
         stars.push({ x, y, time, size, blur });
       }
-    };
+    }, [stars]);
 
-    makeStars();
+    useEffect(() => {
+      const intervalId = setInterval(() => {
+        const changedText = originText
+          .split("")
+          .map((_, index) => {
+            if (index <= rotationIndex.current) {
+              return originText[index];
+            } else {
+              return alphabets[Math.floor(Math.random() * 25)];
+            }
+          })
+          .join("");
+        setText(changedText);
+        rotationIndex.current += 0.1;
+      }, 50);
 
-    const renderStars = () => {
+      makeStars();
+
+      return () => clearInterval(intervalId);
+    }, [makeStars]);
+
+    const renderStars = useCallback(() => {
       return stars.map((star, idx) => (
         <div
           key={idx}
@@ -49,14 +110,15 @@ const Home = forwardRef<HTMLDivElement, Props>(
           className={classes.star}
         />
       ));
-    };
+    }, [stars]);
 
-    const onMouseEnter = () => {
+    const onMouseEnter = useCallback(() => {
       setIsMouseEnter(true);
-    };
-    const onMouseLeave = () => {
+    }, []);
+
+    const onMouseLeave = useCallback(() => {
       setIsMouseEnter(false);
-    };
+    }, []);
 
     return (
       <>
@@ -64,11 +126,15 @@ const Home = forwardRef<HTMLDivElement, Props>(
           {renderStars()}
           <div>
             <p className={classes.intro}>
-              Hello. I'm Kim Won Gil <br />
-              I'm <span style={{ color: "var(--blue500)" }}>
-                web frontend
-              </span>{" "}
-              developer
+              <span>Hello. I'm Won Gil</span> <br />
+              <span
+                style={{ color: "var(--blue500)" }}
+                className={classes.text}
+              >
+                {text}
+              </span>
+              <br />
+              <span>Developer</span>
             </p>
             <motion.div
               className={classes.box}

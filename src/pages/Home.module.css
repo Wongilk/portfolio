@@ -10,11 +10,12 @@
 
 .intro {
   font-size: 3rem;
+  font-family: monospace;
 }
 
 .box {
-  margin: 2rem auto 0 auto;
-  width: 50%;
+  margin: 20px auto 0 auto;
+  width: 400px;
   height: 2rem;
   border: 1px solid var(--blue300);
   cursor: pointer;
@@ -39,4 +40,8 @@
   background-color: var(--blue500);
   animation: blinkEffect step-end infinite;
   border-radius: 50%;
+}
+
+.text {
+  font-family: monospace;
 }
