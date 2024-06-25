@@ -4,7 +4,7 @@
   display: flex;
   list-style-type: none;
   height: 4rem;
-  width: 100%;
+  width: 100vw;
   justify-content: space-evenly;
   align-items: center;
 
@@ -12,9 +12,11 @@
   box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
   backdrop-filter: blur(10px);
 }
-
+.pc_ul p {
+  margin-right: 30%;
+}
 .tablet_container {
-  width: 100%;
+  width: 100vw;
   position: fixed;
   box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
   backdrop-filter: blur(10px);
@@ -27,4 +29,9 @@
   height: 4rem;
   justify-content: space-between;
   align-items: center;
+  margin: 0 20px;
+}
+
+.tablet_icon {
+  cursor: "pointer";
 }

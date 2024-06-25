@@ -17,6 +17,8 @@
   margin: 0 auto;
   gap: 2rem;
   flex-wrap: wrap;
+  max-width: 1200px;
+  width: 80%;
 }
 
 .underline {

@@ -13,7 +13,7 @@ function checkUrl(strUrl: string) {
 
 const Tag = ({ label, value }: Props) => {
   let initValue = <p> {value}</p>;
-  if (checkUrl(value)) initValue = <a href={value}>{value}</a>;
+  if (checkUrl(value)) initValue = <a href={value}>깃 허브 저장소</a>;
   return (
     <div className={classes.container}>
       <div className={classes.label}>

@@ -1,26 +1,16 @@
-import React, { forwardRef } from "react";
+import { forwardRef } from "react";
 import classes from "./About.module.css";
-import { useMediaQuery } from "react-responsive";
+import { useIsMobile } from "../utils/MediaQuery";
 
 const About = forwardRef<HTMLDivElement>((props, ref) => {
-  const isMobile = useMediaQuery({ query: "(max-width : 767px)" });
   return (
     <div className={classes.container} ref={ref}>
-      <div
-        className={classes.body}
-        style={{ display: isMobile ? "block" : "flex" }}
-      >
-        <div
-          className={classes.left}
-          style={{ marginBottom: isMobile ? "15%" : "0%" }}
-        >
+      <div className={useIsMobile() ? classes.mobile_body : classes.pc_body}>
+        <div className={classes.left}>
           About
           <div className={classes.underline} />
         </div>
-        <div
-          className={classes.right}
-          style={{ textAlign: isMobile ? "center" : "left" }}
-        >
+        <div>
           <p className={classes.short}>성장하고자 노력하는 사람</p>
           <p className={classes.long}>
             끊임없이 배우고, <br />

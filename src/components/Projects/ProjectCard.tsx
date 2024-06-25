@@ -1,7 +1,8 @@
-import { useMediaQuery } from "react-responsive";
 import classes from "./ProjectCard.module.css";
 import Tag from "./Tag";
 import { motion } from "framer-motion";
+import { useIsTablet } from "../../utils/MediaQuery";
+
 type Props = {
   index: number;
   backgroundImg: string;
@@ -25,10 +26,6 @@ const ProjectCard = ({
   stack,
   git,
 }: Props) => {
-  const isPc = useMediaQuery({
-    query: "(min-width : 992px)",
-  });
-
   return (
     <motion.div
       className={classes.container}
@@ -41,13 +38,14 @@ const ProjectCard = ({
       <p className={classes.projectType}>{projectType}</p>
 
       <div
-        className={classes.contents}
-        style={{ flexWrap: isPc ? "nowrap" : "wrap" }}
+        className={
+          useIsTablet() ? classes.tablet_contents : classes.pc_contents
+        }
       >
         <img
           src={backgroundImg}
           alt="backgroundImg"
-          style={{ width: isPc ? "50%" : "100%" }}
+          className={useIsTablet() ? classes.tablet_img : classes.pc_img}
         />
         <div className={classes.description}>
           <p>{shortDesc}</p>

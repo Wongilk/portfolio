@@ -1,13 +1,8 @@
 import { forwardRef } from "react";
 import classes from "./Archivings.module.css";
 import ArchivingsCard from "../components/Archivings/ArchivingsCard";
-import { useMediaQuery } from "react-responsive";
-
+import { useIsMobile } from "../utils/MediaQuery";
 const Archivings = forwardRef<HTMLDivElement>((props, ref) => {
-  const isPc = useMediaQuery({
-    query: "(min-width : 992px)",
-  });
-
   const Archivingss = [
     {
       img: "https://www.c-sharpcorner.com/article/create-github-repository-and-add-newexisting-project-using-github-desktop/Images/github.png",
@@ -28,10 +23,7 @@ const Archivings = forwardRef<HTMLDivElement>((props, ref) => {
         <div className={classes.underline} />
       </div>
 
-      <div
-        className={classes.body}
-        style={{ maxWidth: isPc ? "56rem" : "40rem" }}
-      >
+      <div className={classes.body}>
         {Archivingss.map((Archiving) => (
           <ArchivingsCard
             key={Archiving.img}

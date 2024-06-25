@@ -4,13 +4,22 @@
   background-color: var(--blue100);
 }
 
-.body {
+.pc_body {
+  display: flex;
   padding: 6rem 5rem 4rem 5rem;
   margin: 0 auto;
-  width: 70%;
+  width: 60%;
   justify-content: space-between;
   align-items: center;
-  gap: 10%;
+}
+
+.mobile_body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem 0 2rem 0;
 }
 
 .underline {
@@ -28,9 +37,11 @@
 .short {
   font-size: 2rem;
   margin-bottom: 3rem;
+  text-align: center;
 }
 
 .long {
   line-height: 2;
   color: var(--gray500);
+  text-align: center;
 }

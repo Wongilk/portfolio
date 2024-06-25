@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import classes from "./Tab.module.css";
-import { useMediaQuery } from "react-responsive";
+import { useIsMobile } from "../../utils/MediaQuery";
 
 type Props = {
   text: string;
@@ -10,14 +10,10 @@ type Props = {
 };
 
 const Tab = ({ text, onClick, index }: Props) => {
-  const isPc = useMediaQuery({
-    query: "(min-width : 992px)",
-  });
-
   return (
     <>
       <motion.li
-        className={isPc ? classes.pc_li : classes.mobile_li}
+        className={useIsMobile() ? classes.mobile_li : classes.pc_li}
         onClick={onClick}
         data-index={index}
         whileHover={{ scale: 1.15 }}

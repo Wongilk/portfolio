@@ -126,7 +126,8 @@ const Home = forwardRef<HTMLDivElement, Props>(
           {renderStars()}
           <div>
             <p className={classes.intro}>
-              <span>Hello. I'm Won Gil</span> <br />
+              <span>I'm Won Gil</span>
+              <br />
               <span
                 style={{ color: "var(--blue500)" }}
                 className={classes.text}
