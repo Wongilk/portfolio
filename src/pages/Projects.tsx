@@ -45,7 +45,7 @@ const projects = [
       '차종 및 차량 옵션 선택, 옵션 고민해보기, 360도 차량 이미지, 위치 기반으로 카마스터 찾기 ',
     projectType: '팀 프로젝트 (6인)',
     stack: 'JAVASCRIPT, REACT, STYLED-COMPONENT, JAVA',
-    git: 'https://github.com/Wongilk/A5-Idle',
+    git: 'https://github.com/softeerbootcamp-2nd/A5-Idle',
   },
   {
     index: 3,
